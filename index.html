@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Cassandra Birkbeck">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/200-2004159_london-transport-museum-london-underground-map-lunch.png">
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-database.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+    <!--Heading-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="jumbotron">
+                    <h1 class="display-4 text-center" id="center"><img src="assets/images/1200px-Underground.svg.png">
+                    </h1>
+                    <h5 class="display-4 text-center" id="title">Tube Times</h5>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    <!-- Table Displaying Tube Timings-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" span class="border border-secondary">
+
+                <table class="table table-hover table-bordered" id="table">
+                    <div class="containerborder">
+                        <h5 id="tabletitle">Current Tube Schedule</h5>
+                            <tr>
+                                <th scope="col" id="name">Train Name</th>
+                                <th scope="col" id="destination">Desitination</th>
+                                <th scope="col" id="frequency">Frequency(min)</th>
+                                <th scope="col" id="away">Minutes Away</th>
+                                <th scope="col" id="arrival">Next Arrival</th>  
+
+                            </tr>
+                    
+                        <tbody id="table-data"></tbody>
+                    </div>
+                </table>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    <!-- Form allowing users to search for their train times-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <form>
+                    <h5 id="tabletitle">Add Train</h5>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Tube Name</label>
+                        <input type="text" class="form-control" id="tubeName" placeholder="Picadilly Line">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Destination</label>
+                        <input type="text" class="form-control" id="tubeDest"
+                            placeholder="Picadilly Circus">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">First Train Time HH:mm (Military Time)</label>
+                        <input type="text" class="form-control" id="tubeTime" placeholder="14:24">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Frequency (mins)</label>
+                        <input type="text" class="form-control" id="tubeFreq" placeholder="16">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id = "btn-add">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

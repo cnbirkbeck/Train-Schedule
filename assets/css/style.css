@@ -1,0 +1,62 @@
+body{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+
+}
+
+.jumbotron{
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: -70px;
+    padding-bottom: 10px;
+} 
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+        
+} 
+
+h1{
+    background-image: url(../images/mindthegap.png);
+    padding: 10%;
+    background-repeat: repeat-x;
+    background-position-y: 97px;
+    margin-bottom: -90px;
+   
+}
+
+#title{
+    color: rgba(20, 6, 145, 1);
+    font-weight: bold;
+}
+.containerborder{
+    border-style: solid;
+    border-color: rgba(20, 6, 145, 1);
+}
+
+#tabletitle{
+    background: rgba(20, 6, 145, 1);
+    padding:.5%;
+    margin-bottom: 0px;
+    color:white;
+}
+
+#table{
+    background: rgba(255, 255, 255, 0.699);
+}
+
+form{
+    background: rgba(255, 255, 255, 0.699);
+
+}
+
+.form-group{
+    padding-left: .9%;
+    padding-right: .9%;
+}
+button{
+    margin-left: .9%;
+}
